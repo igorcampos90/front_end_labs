@@ -9,6 +9,10 @@
     --font-title-secondary: 'Poppins', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     color: var(--text-primary);
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
