@@ -1,0 +1,100 @@
+:root {
+    --color-primary: #0f71ff;
+    --color-backgroud: #ecf7ff;
+    --color-text: #36393f;
+    --color-light: #f7f7f7;
+    --color-alert: orange;
+
+    --font-main: "Poppins", sans-serif;
+
+    --card-witch: 300px;
+    --card-pagging: 40px;
+    --card-height:540px;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: var(--font-main);
+    background-color: var(--color-backgroud);
+    color: var(--color-text);
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.card{
+    display: grid;
+    place-items: center;
+    gap: 10px;
+    width: var(--card-witch);
+    max-width: var(--card-witch);
+    height: var(--card-height);
+    padding: var(--card-pagging);
+    border-radius: 5px;
+    background-color: white;
+    font-size: 100%;
+    text-align:center;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease, transforms 0.3s ease;
+}
+
+.card:hover{
+    transform: scale(1.10);
+    box-shadow: 0 4px 10px black;
+}
+
+.card h2 {
+    margin: 0;
+    text-shadow: 1px 1px 2px gray;
+}
+
+.card var {
+    color: var(--color-primary);
+    font-weight: 400;
+    font-size: 50px;
+    font-style: normal;
+    margin-bottom: 10px;
+    transition: font-size 0.3s ease;
+}
+
+.card:hover var {
+    font-size: 60px;
+}
+
+
+
+
+.card button {
+    display: grid;
+    place-items: center;
+    min-width: 200px;
+    padding: 10px 0;
+    background: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: inherit;
+    transition: backgroud 0.3s, color 0.3s ease;
+    cursor: pointer;
+}
+
+.alert {
+    border: 2px solid var(--color-alert);
+}
+
+.card:hover button {
+    color: var(--color-light);
+    background: rgba(15, 113, 255, 0.9);
+}
