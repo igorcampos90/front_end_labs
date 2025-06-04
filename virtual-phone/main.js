@@ -1,9 +1,12 @@
-const display = document.querySelector('input[type=tel]');
+const display = 
+    document.querySelector('input[type=tel]');
 
 const teclas = 
     document.querySelectorAll('input[type=button]');
 
 const limpar = document.querySelector('.icon');
+
+const limiteNumeros = 14; 
 
 limpar.onclick = () => {
     const opcao = confirm('Deseja mesmo limpar?');
@@ -13,7 +16,9 @@ limpar.onclick = () => {
 }
 
 function valorTeclaToDisplay (i) {
-    display.value += teclas[i].value;
+    if (display.value.length < limiteNumeros) {
+        display.value += teclas[i].value;
+    }    
 }
 
 
